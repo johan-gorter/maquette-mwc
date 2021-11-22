@@ -1,0 +1,67 @@
+{
+  "name": "maquette-mwc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublishOnly": "tsa clean && npm -s run dist",
+    "assist": "tsa assist",
+    "release": "tsa release",
+    "fix": "tsa fix",
+    "clean": "tsa clean",
+    "dist": "tsc -p ./src/tsconfig.json",
+    "ci": "tsa ci",
+    "coverage-show": "open-cli build/coverage/index.html",
+    "precommit": "tsa pre-commit",
+    "prepush": "npm run dist && tsa pre-push",
+    "postcheckout": "tsa post-checkout || exit 0",
+    "postmerge": "tsa post-merge || exit 0"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "typescript-assistant": "^0.54.1"
+  },
+  "nyc": {
+    "include": [
+      "src/**/*.ts"
+    ],
+    "extension": [
+      ".ts"
+    ],
+    "reporter": [
+      "lcov",
+      "html",
+      "text-summary"
+    ],
+    "cache": true,
+    "temp-directory": "./build/nyc/cache",
+    "all": false,
+    "check-coverage": true,
+    "report-dir": "./build/coverage",
+    "es-module": false,
+    "lines": 100,
+    "statements": 100,
+    "functions": 100,
+    "branches": 100,
+    "watermarks": {
+      "lines": [
+        75,
+        100
+      ],
+      "functions": [
+        75,
+        100
+      ],
+      "branches": [
+        75,
+        100
+      ],
+      "statements": [
+        75,
+        100
+      ]
+    }
+  }
+}
