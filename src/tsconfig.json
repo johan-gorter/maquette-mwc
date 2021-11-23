@@ -8,7 +8,9 @@
     "declaration": true,
     "outDir": "../dist",
     "rootDir": ".",
-    "inlineSources": true
+    "inlineSources": true,
+    "moduleResolution": "Node",
+    "isolatedModules": true
   },
   "include": [
     "./**/*.ts"
