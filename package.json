@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "parcel --cache-dir ./build/parcel ./public/index.html",
     "test": "tsa test",
     "prepublishOnly": "tsa clean && npm -s run dist",
     "assist": "tsa assist",
@@ -69,10 +70,15 @@
   },
   "devDependencies": {
     "@material/mwc-button": "0.25.3",
+    "@material/mwc-icon-button": "0.25.3",
+    "@material/mwc-top-app-bar-fixed": "0.25.3",
     "@webcomponents/webcomponentsjs": "2.6.0",
     "maquette": "3.5.1",
     "maquette-query": "0.11.7",
     "parcel": "1.12.3",
     "typescript-assistant": "0.54.1"
+  },
+  "dependencies": {
+    "@material/mwc-drawer": "^0.25.3"
   }
 }
