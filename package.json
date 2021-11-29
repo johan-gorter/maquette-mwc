@@ -71,6 +71,7 @@
   "devDependencies": {
     "@material/mwc-button": "0.25.3",
     "@material/mwc-icon-button": "0.25.3",
+    "@material/mwc-select": "0.25.3",
     "@material/mwc-top-app-bar-fixed": "0.25.3",
     "@webcomponents/webcomponentsjs": "2.6.0",
     "maquette": "3.5.1",
